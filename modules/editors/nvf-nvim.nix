@@ -6,7 +6,7 @@ let
   # pathLSPConfig = pathNVFConfig + /lsp;
 
   nvimOptions = import (pathNVFConfig + "/options.nix") { inherit pkgs; };
-  nvimMappings = import (pathNVFConfig + "/mappings") { inherit pkgs; };
+  nvimMappings = import (pathNVFConfig + "/mappings.nix") { inherit pkgs; };
 
   lualineConfig = import (pathNVFPlugins + /lualine.nix) { inherit pkgs; };
   incRenameConfig = import (pathNVFPlugins + "/inc-rename.nix") { inherit pkgs; };
