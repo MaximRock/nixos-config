@@ -35,27 +35,27 @@
           };
         };
 
-        # visuals = {
-        #   nvim-web-devicons = nvfConfig.plugins.newWebDevicon;
-        #   nvim-cursorline = nvfConfig.plugins.cursorLine;
-        # };
+        visuals = {
+          nvim-web-devicons = nvfConfig.plugins.newWebDevicon;
+          nvim-cursorline = nvfConfig.plugins.cursorLine;
+        };
 
-        # treesitter = nvfConfig.plugins.treeSitter;
-        # theme = nvfConfig.plugins.themeNvim;
-        # statusline.lualine = nvfConfig.plugins.luaLine;
-        # autocomplete.blink-cmp = nvfConfig.plugins.blinkCmp;
-        # formatter.conform-nvim = nvfConfig.plugins.conForm;
-        # autopairs.nvim-autopairs.enable = true;
-        # telescope = nvfConfig.plugins.teleScope;
-        # tabline.nvimBufferline = nvfConfig.plugins.bufferLine;
-        # diagnostics = nvfConfig.diagnostics;
+        treesitter = nvfConfig.plugins.treeSitter;
+        theme = nvfConfig.plugins.themeNvim;
+        statusline.lualine = nvfConfig.plugins.luaLine;
+        autocomplete.blink-cmp = nvfConfig.plugins.blinkCmp;
+        formatter.conform-nvim = nvfConfig.plugins.conForm;
+        autopairs.nvim-autopairs.enable = true;
+        telescope = nvfConfig.plugins.teleScope;
+        tabline.nvimBufferline = nvfConfig.plugins.bufferLine;
+        diagnostics = nvfConfig.diagnostics;
 
-        # binds.whichKey = {
-        #   enable = true;
-        # };
+        binds.whichKey = {
+          enable = true;
+        };
 
-        # ui.noice = nvfConfig.plugins.noIce;
-        # dashboard.alpha = nvfConfig.plugins.dashboardAlpha;
+        ui.noice = nvfConfig.plugins.noIce;
+        dashboard.alpha = nvfConfig.plugins.dashboardAlpha;
       };
     };
   };
