@@ -1,4 +1,4 @@
-{ pkgs, yandexBrowserPackages, unstable, ... }:
+{ pkgs, yandexBrowserPackages, ... }:
 
 {
   home.username = "max";
