@@ -1,74 +1,67 @@
 { pkgs, nvfConfig, ... }:
 
-
 {
-  import = [
-    ./configs/nvf-config/lsp/lsp-packgs.nix
+  imports = [
+    ./configs/nvf-config/lsp/lsp-pacakgs.nix
   ];
 
   programs.nvf = {
-  enable = true;
-  settings = {
-    vim = {
-      options = nvfConfig.options;
-      extraPlugins = {
-        inc-rename = nvfConfig.plugins.incRename;
-        rainbow-delimiters = nvfConfig.plugins.rainbowDelimiters;
-        indent-blankline = nvfConfig.plugins.indentBlankline;
-      };
-      lazy = {
-        enable = true;
-        plugins = {
-          "neo-tree.nvim" = {
-            package = pkgs.vimPlugins.neo-tree-nvim;
-            setupModule = "neo-tree";
-            setupOpts = nvfConfig.plugins.neoTree.setupNeoTree;
-            keys = nvfConfig.mappings.mappKeys;
+    enable = true;
+    settings = {
+      vim = {
+        options = nvfConfig.options;
+        extraPlugins = {
+          inc-rename = nvfConfig.plugins.incRename;
+          rainbow-delimiters = nvfConfig.plugins.rainbowDelimiters;
+          indent-blankline = nvfConfig.plugins.indentBlankline;
+        };
+        lazy = {
+          enable = true;
+          plugins = {
+            "neo-tree.nvim" = {
+              package = pkgs.vimPlugins.neo-tree-nvim;
+              setupModule = "neo-tree";
+              setupOpts = nvfConfig.plugins.neoTree.setupNeoTree;
+              keys = nvfConfig.mappings.mappKeys;
+            };
           };
         };
-      };
 
-      lsp = nvfConfig.lsp // {
-        servers = {
-          lua_ls = nvfConfig.lsp.servers.lua_ls;
-          nixd = nvfConfig.lsp.servers.nixd;
-          jsonls = nvfConfig.lsp.servers.jsonls;
+        lsp = nvfConfig.lsp // {
+          servers = {
+            lua_ls = nvfConfig.lsp.servers.lua_ls;
+            nixd = nvfConfig.lsp.servers.nixd;
+            jsonls = nvfConfig.lsp.servers.jsonls;
+          };
         };
+
+        # visuals = {
+        #   nvim-web-devicons = nvfConfig.plugins.newWebDevicon;
+        #   nvim-cursorline = nvfConfig.plugins.cursorLine;
+        # };
+
+        # treesitter = nvfConfig.plugins.treeSitter;
+        # theme = nvfConfig.plugins.themeNvim;
+        # statusline.lualine = nvfConfig.plugins.luaLine;
+        # autocomplete.blink-cmp = nvfConfig.plugins.blinkCmp;
+        # formatter.conform-nvim = nvfConfig.plugins.conForm;
+        # autopairs.nvim-autopairs.enable = true;
+        # telescope = nvfConfig.plugins.teleScope;
+        # tabline.nvimBufferline = nvfConfig.plugins.bufferLine;
+        # diagnostics = nvfConfig.diagnostics;
+
+        # binds.whichKey = {
+        #   enable = true;
+        # };
+
+        # ui.noice = nvfConfig.plugins.noIce;
+        # dashboard.alpha = nvfConfig.plugins.dashboardAlpha;
       };
-
-      # visuals = {
-      #   nvim-web-devicons = nvfConfig.plugins.newWebDevicon;
-      #   nvim-cursorline = nvfConfig.plugins.cursorLine;
-      # };
-
-      # treesitter = nvfConfig.plugins.treeSitter;
-      # theme = nvfConfig.plugins.themeNvim;
-      # statusline.lualine = nvfConfig.plugins.luaLine;
-      # autocomplete.blink-cmp = nvfConfig.plugins.blinkCmp;
-      # formatter.conform-nvim = nvfConfig.plugins.conForm;
-      # autopairs.nvim-autopairs.enable = true;
-      # telescope = nvfConfig.plugins.teleScope;
-      # tabline.nvimBufferline = nvfConfig.plugins.bufferLine;
-      # diagnostics = nvfConfig.diagnostics;
-
-      # binds.whichKey = {
-      #   enable = true;
-      # };
-
-      # ui.noice = nvfConfig.plugins.noIce;
-      # dashboard.alpha = nvfConfig.plugins.dashboardAlpha;
     };
   };
-};
 }
 
-
-
-
-
-
-
-# let 
+# let
 #   pathNVFConfig = ./configs/nvf-config;
 #   pathNVFPlugins = pathNVFConfig + /plugins;
 #   pathLSPConfig = pathNVFConfig + /lsp;
@@ -83,10 +76,10 @@
 #   rainbowDelimitersConfig = import (pathNVFPlugins + "/rainbow-delimiters.nix") { inherit pkgs; };
 #   indentBlanklineConfig = import (pathNVFPlugins + "/indent-blankline.nix") { inherit pkgs; };
 #   neoTreeConfig = import (pathNVFPlugins + "/neo-tree.nix") { inherit pkgs; };
-# in 
+# in
 
 # {
-  
+
 #   programs.nvf = {
 #     enable = true;
 #     settings = {
