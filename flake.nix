@@ -30,6 +30,12 @@
       yandex-browser,
       ...
     }@inputs:
+    let
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+      nvfConfig = import ./programs/nvf-config { inherit pkgs; };
+    in
+
     {
       nixosConfigurations = {
         "nixos-max" = nixpkgs.lib.nixosSystem {
@@ -57,6 +63,7 @@
           ];
           specialArgs = {
             inherit inputs;
+            nvfConfig = nvfConfig;
             # Передаем unstable в system configuration
             unstable = import nixpkgs-unstable {
               system = "x86_64-linux";
@@ -75,6 +82,7 @@
           ];
           extraSpecialArgs = {
             inherit inputs;
+            nvfConfig = nvfConfig;
             yandexBrowserPackages = yandex-browser.packages.x86_64-linux;
             unstable = import nixpkgs-unstable {
               system = "x86_64-linux";
