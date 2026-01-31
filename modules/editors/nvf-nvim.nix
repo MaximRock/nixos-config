@@ -38,13 +38,13 @@ in
             };
           };
         };
-        lsp = pathNVFConfig.lsp // {
-          servers = {
-            lua_ls = pathNVFConfig.lsp.servers.lua_ls;
-            nixd = pathNVFConfig.lsp.servers.nixd;
-            jsonls = pathNVFConfig.lsp.servers.jsonls;
-          };
-        };
+        # lsp = pathNVFConfig.lsp // {
+        #   servers = {
+        #     lua_ls = pathNVFConfig.lsp.servers.lua_ls;
+        #     nixd = pathNVFConfig.lsp.servers.nixd;
+        #     jsonls = pathNVFConfig.lsp.servers.jsonls;
+        #   };
+        # };
         theme = {
           enable = true;
           name = "tokyonight";
