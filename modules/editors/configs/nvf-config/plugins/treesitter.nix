@@ -21,5 +21,5 @@ in
   };
   indent.enable = false;
   highlight.enable = true;
-  incrementalSelection.enable = true;
+  #incrementalSelection.enable = true;
 }
