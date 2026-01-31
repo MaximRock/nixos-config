@@ -33,7 +33,7 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      nvfConfig = import ./programs/nvf-config { inherit pkgs; };
+      nvfConfig = import ./modules/editors/configs/nvf-config { inherit pkgs; };
     in
 
     {
@@ -65,7 +65,6 @@
           specialArgs = {
             inherit inputs;
             nvfConfig = nvfConfig;
-            # Передаем unstable в system configuration
             unstable = import nixpkgs-unstable {
               system = "x86_64-linux";
               config.allowUnfree = true;
