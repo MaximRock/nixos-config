@@ -31,11 +31,5 @@
       action = ":IncRename ";
       desc = "Used IncRename";
     }
-    {
-      mode = "n";
-      key = "<leader>ac";
-      action = "<cmd>CodeCompanionChat Toggle<cr>";
-      desc = "CodeCompanionChat";
-    }
   ];
 }
