@@ -2,11 +2,11 @@
 
 let 
   pathNVFConfig = ./config/nvf-config;
-  pathNVFPlugins = pathNVFConfig + "/plugins";
+  pathNVFPlugins = pathNVFConfig + /plugins;
   lualineConfig = import (pathNVFPlugins + "/lualine.nix") { inherit pkgs; };
   nvimOptions = import (pathNVFConfig + "/options.nix") { inherit pkgs; };
   incRenameConfig = import (pathNVFPlugins + "/inc-rename.nix") { inherit pkgs; };
-  rainbowDelimitersConfig = import (pathNVFPlugins + "/raibow-delimiters.nix") { inherit pkgs; };
+  rainbowDelimitersConfig = import (pathNVFPlugins + "/ranibow-delimiters.nix") { inherit pkgs; };
   indentBlanklineConfig = import (pathNVFPlugins + "/indent-blankline.nix") { inherit pkgs; };
 in 
 
