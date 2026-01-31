@@ -34,7 +34,7 @@ in
               package = pkgs.vimPlugins.neo-tree-nvim;
               setupModule = "neo-tree";
               setupOpts = neoTreeConfig;
-              keys = nvimMappings;
+              keys = nvimMappings.mappKeys;
             };
           };
         };
