@@ -2,7 +2,6 @@
   description = "NixOS configuration with Home Manager";
 
   inputs = {
-    # Два канала - stable и unstable
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 

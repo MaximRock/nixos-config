@@ -3,7 +3,7 @@
 let 
   pathNVFConfig = ./configs/nvf-config;
   pathNVFPlugins = pathNVFConfig + /plugins;
-  # pathLSPConfig = pathNVFConfig + /lsp;
+  pathLSPConfig = pathNVFConfig + /lsp;
 
   nvimOptions = import (pathNVFConfig + "/options.nix") { inherit pkgs; };
   nvimMappings = import (pathNVFConfig + "/mappings.nix") { inherit pkgs; };
@@ -38,13 +38,13 @@ in
             };
           };
         };
-        # lsp = pathNVFConfig.lsp // {
-        #   servers = {
-        #     lua_ls = pathNVFConfig.lsp.servers.lua_ls;
-        #     nixd = pathNVFConfig.lsp.servers.nixd;
-        #     jsonls = pathNVFConfig.lsp.servers.jsonls;
-        #   };
-        # };
+        lsp = pathNVFConfig.lsp // {
+          servers = {
+            lua_ls = pathNVFConfig.lsp.servers.lua_ls;
+            nixd = pathNVFConfig.lsp.servers.nixd;
+            jsonls = pathNVFConfig.lsp.servers.jsonls;
+          };
+        };
         theme = {
           enable = true;
           name = "tokyonight";
