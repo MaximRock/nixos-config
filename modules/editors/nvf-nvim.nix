@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let 
-  pathNVFConfig = ./config/nvf-config;
+  pathNVFConfig = ./configs/nvf-config;
   pathNVFPlugins = pathNVFConfig + /plugins;
   lualineConfig = import (pathNVFPlugins + /lualine.nix) { inherit pkgs; };
   nvimOptions = import (pathNVFConfig + "/options.nix") { inherit pkgs; };
