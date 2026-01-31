@@ -1,8 +1,12 @@
-{ ... }:
+{ pkgs, ... }:
+
+let
+  theme = import ../nvf-var.nix { inherit pkgs; };
+in
 
 {
   enable = true;
-  theme = "material";
+  theme = theme.luaLineTheme; # "material";
   activeSection.z = [
     ''
       {

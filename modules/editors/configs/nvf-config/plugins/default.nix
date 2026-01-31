@@ -17,4 +17,3 @@
   noIce = import ./noice.nix { inherit pkgs; };
   dashboardAlpha = import ./dashboard-alpha.nix { inherit pkgs; };
 }
-

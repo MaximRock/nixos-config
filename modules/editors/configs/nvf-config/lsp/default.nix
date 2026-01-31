@@ -66,7 +66,7 @@
           };
           options = {
             nixos = {
-              expr = "(builtins.getFlake \"/home/max/.dotfiles\").nixosConfigurations.nixos-max.options";
+              expr = "(builtins.getFlake \"/home/max/.dotfiles\").nixosConfigurations.nixos.options";
             };
             home_manager = {
               expr = "(builtins.getFlake \"/home/max/.dotfiles\").homeConfigurations.max.options";
